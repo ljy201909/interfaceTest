@@ -8,9 +8,11 @@ from ddt import ddt,data,unpack
 import requests
 
 from common.readExcel import readExcel
+from common.writeExcel import writeExcel
 
 d = readExcel()
 testda = d.assembleData()
+w = writeExcel()
 
 @ddt
 class MyTestCase1(unittest.TestCase):
@@ -37,12 +39,15 @@ class MyTestCase1(unittest.TestCase):
         # print(type(expect))
         try:
             if self.assertEqual(real,int(expect)) == None:
-                result = 'Success'
-                print('验证结果',result)
+                # result = 'Success'
+                #print('验证结果',result)
+                w.writeResult(int(id),real,"Success")
         except AssertionError as msg:
             #print(msg)
-            result = 'Fail'
-            print('验证结果', result)
+            # result = 'Fail'
+            #print('验证结果', result)
+            w.writeResult(int(id),real,'Fail')
+
 
 
 
