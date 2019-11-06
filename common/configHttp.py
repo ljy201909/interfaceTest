@@ -4,6 +4,7 @@ __author__ = 'ljy'
 
 import  requests
 from common import readConfig as readConfig
+localReadConfig = readConfig.ReadConfig()
 
 class ConfigHttp(object):
 
@@ -23,9 +24,9 @@ class ConfigHttp(object):
     def post(self,url,param):
         try:
             respone = requests.post(url,data=eval(param))
-            print(type(eval(param)))
+            # print(type(eval(param)))
             result = respone.text
-            print(result)
+            # print(result)
             return result
         except Exception:
             print('request error,please check out!')
@@ -33,9 +34,9 @@ class ConfigHttp(object):
 
     def getRequest(self,url,param,method):
         if str(method) == 'get':
-            self.get(url,param)
+            return self.get(url,param)
         elif str(method) == "post":
-            self.post(url,param)
+            return self.post(url,param)
 
 
 

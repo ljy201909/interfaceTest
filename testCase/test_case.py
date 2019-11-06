@@ -9,10 +9,12 @@ import requests
 
 from common.readExcel import readExcel
 from common.writeExcel import writeExcel
+from common.configHttp import ConfigHttp
 
 d = readExcel()
 testda = d.assembleData()
 w = writeExcel()
+r = ConfigHttp()
 
 @ddt
 class MyTestCase1(unittest.TestCase):
@@ -21,19 +23,21 @@ class MyTestCase1(unittest.TestCase):
     @unpack
     def test1(self,id,url,method,param,expect):
         #print(id,url,method,param,expect)
-        param = json.loads(param)
-        if method == 'post':
-            response = requests.post(url=url,data=param)
-            #print(response.status_code)
-        else:
-            response = requests.get(url=url,params=param)
-            #print(response.status_code)
+        # param = json.loads(param)
+        result = r.getRequest(url,param,method)
+        # print(result)
+        # if method == 'post':
+        #     response = requests.post(url=url,data=param)
+        #     #print(response.status_code)
+        # else:
+        #     response = requests.get(url=url,params=param)
+        #     #print(response.status_code)
         #将response的text放入result，方便断言
         # result = response.text
         # print(result)
         # print(type(result))
         # real = result.json()['errorCode']
-        real = json.loads(response.text)['errorCode']
+        real = json.loads(result)['errorCode']
         #print(real)
         # print(type(real))
         # print(type(expect))
