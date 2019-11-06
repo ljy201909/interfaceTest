@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e1a4ea1-18fd-40e1-a25d-932bbb2ac168" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/homework/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework/mysqlExercise.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/configHttp.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/configHttp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testCase/test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/test_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testData/data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/testData/data.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +30,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1T3MSEFYqNbPD8626qANjWErxr4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
