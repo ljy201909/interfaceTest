@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e1a4ea1-18fd-40e1-a25d-932bbb2ac168" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/homework/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework/mysqlExercise.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework/redisExercise.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
