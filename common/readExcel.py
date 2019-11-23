@@ -8,8 +8,8 @@ import xlrd
 
 class readExcel(object):
     dir = 'testData'
-    excel_dir = os.path.dirname(os.getcwd()) + "\\" + dir
-    #excel_dir = os.getcwd() + "\\" + dir
+    #excel_dir = os.path.dirname(os.getcwd()) + "\\" + dir
+    excel_dir = os.getcwd() + "\\" + dir
 
     workbook = xlrd.open_workbook(excel_dir + '\\' + 'data.xlsx')
     #根据sheet索引或者名称获取sheet内容
@@ -103,6 +103,6 @@ class readExcel(object):
 if __name__ == '__main__':
     print(os.getcwd())
 
-p = readExcel()
-#p.getInterfaceList()
-p.assembleData()
+# p = readExcel()
+# #p.getInterfaceList()
+# p.assembleData()

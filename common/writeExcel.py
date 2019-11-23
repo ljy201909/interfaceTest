@@ -8,20 +8,11 @@ import os
 
 class writeExcel():
     dir = 'testData'
-    excel_dir = os.path.dirname(os.getcwd()) + "\\" + dir
+    # excel_dir = os.path.dirname(os.getcwd()) + "\\" + dir
+    excel_dir = os.getcwd() + "\\" + dir
     # print(excel_dir)
     wb = openpyxl.load_workbook(excel_dir + '\\' + 'data.xlsx')
     sheetnames = wb.sheetnames
-    # print(sheetnames)
-    # # excel_dir = os.getcwd() + "\\" + dir
-    #
-    # workbook = xlrd.open_workbook(excel_dir + '\\' + 'data.xlsx')
-    # # 根据sheet索引或者名称获取sheet内容
-    # sheet1 = workbook.sheet_by_index(0)
-    # urlSheet = workbook.sheet_by_name('urlSheet')
-    # paramSheet = workbook.sheet_by_name('paramSheet')
-    # assertSheet = workbook.sheet_by_name('assertSheet')
-    # rownum = urlSheet.nrows
 
     def writeResult(self,id,real,result):
         #打开一个Excel
